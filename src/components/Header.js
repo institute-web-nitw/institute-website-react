@@ -2,8 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
-// TODO : - Add states, so selected tab can be highlighted
-
 const Header = ({ selectedTab }) => {
   return (
     <React.Fragment>
@@ -37,8 +35,7 @@ const Header = ({ selectedTab }) => {
                 >
                   <span />
                 </button>
-                {/* TITLE FOR MOBILE VIEW NAV BAR, ADD STATE TO HANDLE DYNAMIC TAB SWITCHING */}
-                <h4 className="panel-title d-lg-none">Pages</h4>
+                <h4 className="panel-title d-lg-none">NIT Warangal</h4>
                 {/* RD Navbar Right Side Toggle*/}
                 <button
                   className="rd-navbar-top-panel-toggle d-lg-none"
@@ -55,13 +52,13 @@ const Header = ({ selectedTab }) => {
                             <span className="icon mdi mdi-phone text-middle" />
                           </div>
                           <div className="unit-body">
-                            <a href="tel:#">0870 245 9191</a>{" "}
-                            {/* <a
+                            <a href="tel:#">1-800-1234-567,</a>{" "}
+                            <a
                               className="d-block d-lg-inline-block"
                               href="tel:#"
                             >
                               1-800-6547-321
-                            </a> */}
+                            </a>
                           </div>
                         </div>
                       </li>
@@ -71,7 +68,9 @@ const Header = ({ selectedTab }) => {
                             <span className="icon mdi mdi-map-marker text-middle" />
                           </div>
                           <div className="unit-body">
-                            <a href="#">Fathimanagar, Telangana, 506004</a>
+                            <a href="#">
+                              2130 Fulton Street San Diego, CA 94117-1080 USA
+                            </a>
                           </div>
                         </div>
                       </li>
@@ -81,7 +80,7 @@ const Header = ({ selectedTab }) => {
                             <span className="icon mdi mdi-email-open text-middle" />
                           </div>
                           <div className="unit-body">
-                            <a href="mailto:#">email@nitw.ac.in</a>
+                            <a href="mailto:#">info@demolink.org</a>
                           </div>
                         </div>
                       </li>
@@ -104,7 +103,7 @@ const Header = ({ selectedTab }) => {
                       </div>
                       <div className="unit-body text-xxl-start">
                         <div className="rd-navbar-brand-title">
-                          National Institute of Technology Warangal
+                          National Institute of Technology, Warangal
                         </div>
                         <div className="rd-navbar-brand-slogan">
                           Telangana, India
@@ -130,175 +129,287 @@ const Header = ({ selectedTab }) => {
                     </div>
                     {/* RD Navbar Nav*/}
                     <ul className="rd-navbar-nav">
-                      <li className={selectedTab == "home" ? "active" : ""}>
-                        <Link to="/">Home</Link>
+                      {/* HOME NAVBAR ITEMS */}
+                      <li className="active">
+                        <a href="index.html">Home</a>
                         <ul className="rd-navbar-dropdown">
                           <li>
-                            <a href="home-1.html">Home 1</a>
+                            <a href="home-1.html">About Us</a>
                           </li>
                           <li>
-                            <a href="home-2.html">Home 2</a>
+                            <a href="home-2.html">Board of Governers</a>
                           </li>
                           <li>
-                            <a href="home-3.html">Home 3</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li
-                        className={
-                          selectedTab == "administration" ? "active" : ""
-                        }
-                      >
-                        <Link to="/administration">Administration</Link>
-                        <ul className="rd-navbar-dropdown">
-                          <li>
-                            <a href="grid.html">Grid</a>
-                          </li>
-                          <li>
-                            <a href="icons.html">Icons</a>
-                          </li>
-                          <li>
-                            <a href="tables.html">Tables</a>
-                          </li>
-                          <li>
-                            <a href="progress-bars.html">Progress bars</a>
-                          </li>
-                          <li>
-                            <a href="tabs-and-accordions.html">
-                              Tabs &amp; Accordions
+                            <a href="home-3.html">
+                              Building and Works Committee
                             </a>
                           </li>
                           <li>
-                            <a href="forms.html">Forms</a>
+                            <a href="home-3.html">Finance Committee</a>
                           </li>
                           <li>
-                            <a href="buttons.html">Buttons</a>
+                            <a href="home-3.html">Gallery</a>
                           </li>
                           <li>
-                            <a href="typography.html">Typography</a>
+                            <a href="home-3.html">Mission</a>
+                          </li>
+                          <li>
+                            <a href="home-3.html">Vision</a>
+                          </li>
+                          <li>
+                            <a href="home-3.html">Visiting NITW</a>
                           </li>
                         </ul>
                       </li>
-                      <li
-                        className={selectedTab == "academics" ? "active" : ""}
-                      >
+
+                      {/* ADMINISTRATION NAVBAR ITEMS */}
+                      <li>
+                        <a href="#">Administration</a>
+                        <ul className="rd-navbar-dropdown">
+                          <li>
+                            <a href="grid.html">Academic Administration</a>
+                          </li>
+                          <li>
+                            <a href="icons.html">Registrar</a>
+                          </li>
+                          <li>
+                            <a href="tables.html">Chairman</a>
+                          </li>
+                          <li>
+                            <a href="progress-bars.html">
+                              Chief Vigilance Officer
+                            </a>
+                          </li>
+                          <li>
+                            <a href="tabs-and-accordions.html">Director</a>
+                          </li>
+                          <li>
+                            <a href="forms.html">Emergency Contact Numbers</a>
+                          </li>
+                          <li>
+                            <a href="buttons.html">
+                              Faculty Information System
+                            </a>
+                          </li>
+                          <li>
+                            <a href="typography.html">Annual Report</a>
+                          </li>
+                          <li>
+                            <a href="typography.html">
+                              Memorandum of Association
+                            </a>
+                          </li>
+                          <li>
+                            <a href="typography.html">
+                              Memorandum of Understanding
+                            </a>
+                          </li>
+                          <li>
+                            <a href="typography.html">About NITs Council</a>
+                          </li>
+                          <li>
+                            <a href="typography.html">Organization Chart</a>
+                          </li>
+                          <li>
+                            <a href="typography.html">Right to Information</a>
+                          </li>
+                          <li>
+                            <a href="typography.html">Statutory Policies</a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      {/* ACADEMICS NAVBAR ITEMS */}
+                      <li>
                         <a href="#">Academics</a>
                         <div className="rd-navbar-megamenu">
                           <div className="row section-relative">
+                            {/* GENERAL LINKS COLUMN */}
                             <ul className="col-lg-3">
                               <li>
-                                <h6>Programs</h6>
+                                <h6>General Links</h6>
                                 <ul className="list-unstyled offset-lg-top-20">
                                   <li>
-                                    <a href="academics.html">Academics</a>
+                                    <a href="academics.html">
+                                      Academic Services
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="academics.html">Departments</a>
+                                  </li>
+                                  <li>
+                                    <a href="academics.html">Announcements</a>
+                                  </li>
+                                  <li>
+                                    <a href="academics.html">Academic Report</a>
+                                  </li>
+                                  <li>
+                                    <a href="academics.html">Academic Team</a>
+                                  </li>
+                                  <li>
+                                    <a href="academics.html">Admissions</a>
+                                  </li>
+                                  <li>
+                                    <a href="academics.html">Fee Structure</a>
+                                  </li>
+                                  <li>
+                                    <a href="academics.html">Forms</a>
                                   </li>
                                 </ul>
                               </li>
                             </ul>
+
+                            {/* DEPARTMENTSCOLUMN */}
                             <ul className="col-lg-3">
                               <li>
-                                <h6>Pages</h6>
+                                <h6>Departments</h6>
                                 <ul className="list-unstyled offset-lg-top-20">
                                   <li>
-                                    <a href="404.html">404</a>
-                                  </li>
-                                  <li>
-                                    <a href="privacy-policy.html">
-                                      Privacy Policy
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="maintenance.html">Maintenance</a>
-                                  </li>
-                                  <li>
-                                    <a href="login-register.html">
-                                      Login/Register
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="coming-soon.html">Coming Soon</a>
-                                  </li>
-                                  <li>
-                                    <a href="search-results.html">
-                                      Search Results
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="apply.html">Apply</a>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                            <ul className="col-lg-3">
-                              <li>
-                                <h6>Layouts</h6>
-                                <ul className="list-unstyled offset-lg-top-20">
-                                  <li>
-                                    <a href="header-transparent.html">
-                                      Header Transparent
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="header-center.html">
-                                      Header Center, Footer Center
+                                    <a href="header-minimal.html">
+                                      Electrical Engineering
                                     </a>
                                   </li>
                                   <li>
                                     <a href="header-minimal.html">
-                                      Header Minimal, Footer Center
+                                      Mechanical Engineering
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="header-corporate.html">
-                                      Header Corporate
+                                    <a href="header-minimal.html">
+                                      Chemical Engineering
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="header-hamburger-menu.html">
-                                      Header Hamburger Menu
+                                    <a href="header-minimal.html">
+                                      Civil Engineering
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="footer-minimal.html">
-                                      Footer Minimal
+                                    <a href="header-minimal.html">
+                                      Biotechnology
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="footer-widget.html">
-                                      Footer Widget
+                                    <a href="header-minimal.html">
+                                      Humanities and Social Science
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="header-minimal.html">
+                                      Chemistry Department
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="header-minimal.html">
+                                      Maths Department
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="header-minimal.html">
+                                      Physics Department
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="header-minimal.html">
+                                      Physical Education
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="header-minimal.html">
+                                      School of Management
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="header-minimal.html">
+                                      Metallurgical and Materials Engineering
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="header-center.html">
+                                      Electronics and Communication Engineering
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="header-transparent.html">
+                                      Computer Science and Engineering
                                     </a>
                                   </li>
                                 </ul>
                               </li>
                             </ul>
+
+                            {/* RULES AND REGULATIONS COLUMN */}
                             <ul className="col-lg-3">
                               <li>
-                                <h6>About</h6>
+                                <h6>Rules and Regulations</h6>
                                 <ul className="list-unstyled offset-lg-top-20">
                                   <li>
-                                    <a href="history.html">History</a>
+                                    <a href="header-transparent.html">
+                                      Ph. D Programmes
+                                    </a>
                                   </li>
                                   <li>
-                                    <a href="people.html">People</a>
+                                    <a href="header-center.html">
+                                      PG Programmes
+                                    </a>
                                   </li>
                                   <li>
-                                    <a href="team-member-profile.html">
-                                      Team Member Profile
+                                    <a href="header-minimal.html">
+                                      Undergraduate Programmes
                                     </a>
                                   </li>
                                 </ul>
                               </li>
+
                               <li>
-                                <h6>Event Calendar</h6>
+                                <h6>Academic Calendar</h6>
                                 <ul className="list-unstyled offset-lg-top-20">
                                   <li>
-                                    <a href="calendar.html">Calendar</a>
+                                    <a href="404.html">Odd Semester</a>
                                   </li>
                                   <li>
-                                    <a href="day-event.html">Day Event</a>
+                                    <a href="privacy-policy.html">
+                                      Even Semester
+                                    </a>
                                   </li>
                                   <li>
-                                    <a href="event-page.html">Event Page</a>
+                                    <a href="maintenance.html">
+                                      Summer Quarter
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+
+                            {/* ACADEMIC PROGRAMMES COLUMN */}
+                            <ul className="col-lg-3">
+                              <li>
+                                <h6>Academic Programmes</h6>
+                                <ul className="list-unstyled offset-lg-top-20">
+                                  <li>
+                                    <a href="history.html">
+                                      Doctor of Philosophy
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="people.html">Postgraduate</a>
+                                  </li>
+                                  <li>
+                                    <a href="team-member-profile.html">
+                                      Undergraduate
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+
+                              <li>
+                                <h6>Time Table</h6>
+                                <ul className="list-unstyled offset-lg-top-20">
+                                  <li>
+                                    <a href="calendar.html">Even Semester</a>
+                                  </li>
+                                  <li>
+                                    <a href="day-event.html">Odd Semester</a>
                                   </li>
                                 </ul>
                               </li>
@@ -306,7 +417,9 @@ const Header = ({ selectedTab }) => {
                           </div>
                         </div>
                       </li>
-                      <li className={selectedTab == "research" ? "active" : ""}>
+
+                      {/* RESEARCH NAVBAR ITEMS */}
+                      <li>
                         <a href="#">Research</a>
                         <ul className="rd-navbar-dropdown">
                           <li>
@@ -331,9 +444,9 @@ const Header = ({ selectedTab }) => {
                           </li>
                         </ul>
                       </li>
-                      <li
-                        className={selectedTab == "campus_life" ? "active" : ""}
-                      >
+
+                      {/* CAMPUS LIFE NAVBAR ITEMS */}
+                      <li>
                         <a href="#">Campus Life</a>
                         <ul className="rd-navbar-dropdown">
                           <li>
@@ -352,7 +465,9 @@ const Header = ({ selectedTab }) => {
                           </li>
                         </ul>
                       </li>
-                      <li className={selectedTab == "more" ? "active" : ""}>
+
+                      {/* MORE NAVBAR ITEMS */}
+                      <li>
                         <a href="#">More</a>
                         <ul className="rd-navbar-dropdown">
                           <li>
@@ -369,91 +484,8 @@ const Header = ({ selectedTab }) => {
                           </li>
                         </ul>
                       </li>
-                      {/* <li>
-                        <a href="donate.html">Donate</a>
-                      </li>
-                      <li>
-                        <a href="contacts.html">Contacts</a>
-                      </li>
-                      <li className="d-lg-none">
-                        <a href="shopping-cart.html">Shopping Cart (2)</a>
-                      </li> */}
                     </ul>
-                    {/*RD Navbar Mobile Search*/}
-                    <div
-                      className="rd-navbar-search-mobile"
-                      id="rd-navbar-search-mobile"
-                    >
-                      <form
-                        className="rd-navbar-search-form search-form-icon-right rd-search"
-                        action="search-results.html"
-                        method="GET"
-                      >
-                        <div className="form-wrap">
-                          <label
-                            className="form-label"
-                            htmlFor="rd-navbar-mobile-search-form-input"
-                          >
-                            Search...
-                          </label>
-                          <input
-                            className="rd-navbar-search-form-input form-input form-input-gray-lightest"
-                            id="rd-navbar-mobile-search-form-input"
-                            type="text"
-                            name="s"
-                            autoComplete="off"
-                          />
-                        </div>
-                        <button
-                          className="icon fa fa-search rd-navbar-search-button"
-                          type="submit"
-                        />
-                      </form>
-                    </div>
                   </div>
-                </div>
-                {/*RD Navbar Search*/}
-                <div className="rd-navbar-search">
-                  <a
-                    className="rd-navbar-search-toggle mdi"
-                    data-rd-navbar-toggle=".rd-navbar-search"
-                    href="#"
-                  >
-                    <span />
-                  </a>
-                  <form
-                    className="rd-navbar-search-form search-form-icon-right rd-search"
-                    action="search-results.html"
-                    data-search-live="rd-search-results-live"
-                    method="GET"
-                  >
-                    <div className="form-wrap">
-                      <label
-                        className="form-label"
-                        htmlFor="rd-navbar-search-form-input"
-                      >
-                        Search
-                      </label>
-                      <input
-                        className="rd-navbar-search-form-input form-input form-input-gray-lightest"
-                        id="rd-navbar-search-form-input"
-                        type="text"
-                        name="s"
-                        autoComplete="off"
-                      />
-                      <div
-                        className="rd-search-results-live"
-                        id="rd-search-results-live"
-                      />
-                    </div>
-                  </form>
-                </div>
-                {/*RD Navbar shop*/}
-                <div className="rd-navbar-cart">
-                  <span className="icon fa fa-shopping-cart" />
-                  <a className="inset-left-10" href="shopping-cart.html">
-                    2
-                  </a>
                 </div>
               </div>
             </div>

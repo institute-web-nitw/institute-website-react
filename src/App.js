@@ -1,15 +1,16 @@
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import DepartmentPage from "./pages/DepartmentPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import TestPage from "./pages/TestPage";
+import CseDepartmentPage from "./pages/academics/departments/CseDepartmentPage";
+import AcademicServicesPage from "./pages/academics/AcademicServicesPage";
 
 function App() {
   return (
-    <div className="App page text-center">
+    <div className="App">
       <Switch>
-        <Route path="/" component={DepartmentPage} exact />
-        <Route path="/administration" component={DepartmentPage} />
-        <Route path="/shop" component={DepartmentPage} />
+        <Route path="/test" component={TestPage} />
+        <Route path="/test2" component={AcademicServicesPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
