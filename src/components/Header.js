@@ -43,7 +43,7 @@ const Header = ({ selectedTab }) => {
                 >
                   <span />
                 </button>
-                <div className="rd-navbar-top-panel">
+                {/* <div className="rd-navbar-top-panel">
                   <div className="rd-navbar-top-panel-left-part">
                     <ul className="list-unstyled">
                       <li>
@@ -86,7 +86,7 @@ const Header = ({ selectedTab }) => {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="rd-navbar-menu-wrap clearfix">
                 {/*Navbar Brand*/}
